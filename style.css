@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(13, 46, 19);
+}
+
+header {
+    background-color: #553584;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Helvetica Neue';
+
+}
+
+.h1-header {
+    text-shadow:  4px 9px 7px;
+    margin: 20px;
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.links {
+    display: flex;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 100;
+    margin-inline: 150px;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: #553584;
+    color: white;
+    font-family: 'Helvetica Neue';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.main-div {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    margin: 20px;
+}
+
+.content {
+    flex: 3;
+    padding: 1em;
+}
+
+img {
+    width: 500px;
+}
+
+.div1, .div2, .div3, .div4 {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 1em;
+    background-color: #553584;
+    color: whitesmoke;
+    font-family:'Trebuchet MS';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Медіа-запити */
+@media (max-width: 768px) {
+
+    header {
+        margin: auto;
+        width: 230%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .sidebar {
+        order: 2; /* Бокова панель переміщується вниз */
+    }
+
+    .content {
+        order: 1;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        margin: auto;
+        width: 220%;
+        padding: 0.5em;
+    }
+
+    .responsive-image {
+        width: 100%;
+        height: auto;
+    }
+}
